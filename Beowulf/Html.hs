@@ -184,7 +184,7 @@ instance HasChild DocumentObject Escape where
                     '&' -> BC.pack "&amp;"
                     '<' -> BC.pack "&lt;"
                     '>' -> BC.pack "&gt;"
-                    '"' -> BC.pack "&quot;"
+                    '\"' -> BC.pack "&quot;"
                     _ -> if isAscii ch then BC.singleton ch else
                             BC.pack $ printf "&#x%04x;" (ord ch)
 
